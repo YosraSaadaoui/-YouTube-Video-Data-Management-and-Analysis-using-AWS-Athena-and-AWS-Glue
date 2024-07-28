@@ -6,10 +6,8 @@
 - [source de données](#source-de-données)
 - [Architecture](#architecture)
 - [services AWS](#services-AWS)
-  - [Mockup](#mockup)
-  - [Tools](#tools)
-- [Development](#development)
-  - [Pseudocode](#pseudocode)
+- [Ètapes du projets](#Ètapes-du-projets)
+  - [I.Création d’un utilisateur IAM ](I.Création-d’un-utilisateur-IAM)
   - [Data Exploration](#data-exploration)
   - [Data Cleaning](#data-cleaning)
   - [Transform the Data](#transform-the-data)
@@ -63,4 +61,4 @@ Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos 
  - AWS Lambda : Lambda est un service de calcul qui permet aux programmeurs d'exécuter du code sans créer ni gérer de serveurs.
  - AWS Athena : Athena est un service de requêtes interactives pour S3, permettant de interroger les données directement dans S3 sans avoir besoin de les charger.
 
-   
+# Ètapes du projets

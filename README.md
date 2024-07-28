@@ -12,6 +12,7 @@
   - [III. Extraction des données dans un compartiment S3](#III.extraction-des-donnees-dans-un-compartiment-S3)
   - [IV. Intégration de données avec AWS GLUE](#IV.-Intégration-de-données-avec-AWS-GLUE)
   - [V. Analyse ad-hoc avec AWS Athena](#V.-Analyse-ad-hoc-avec-AWS-Athena)
+  - [VI. nettoyage des données avec AWS LAMBDA](#VI.-nettoyage-des-données-avec-AWS-LAMBDA)
 - [Testing](#testing)
   - [Data Quality Tests](#data-quality-tests)
 - [Visualization](#visualization)
@@ -81,6 +82,15 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
 ##  IV. Intégration de données avec AWS GLUE
 - Créer un role pour AWS glue (Autoriser l’acces aux compartiments S3)
 - Créer un crawler catalogue : Pour extraire des informations sur le schéma des données, ce qui est utile pour comprendre la structure des données, créer des transformations et générer des schémas de destination pour les data lakes. Une fois que les données sont découvertes et cataloguées par le crawler, elles peuvent être utilisées avec Amazon Athena pour l'analyse SQL
-- Une fois le crawler est créé, on l’exécute. Une table est créée dans la base de données destination ( crée lors de la création  du crawler catalogue) 
+- Exécuter le crawler. Une table est créée dans la base de données destination ( crée lors de la création  du crawler catalogue) 
   
 ## V. Analyse ad-hoc avec AWS Athena
+On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement les données et obtenir des réponses à des requêtes sans avoir à attendre le chargement préalable des données.
+- Configurer un emplacement pour les résultats de requêtes dans Amazon S3.
+- Exécuter la première requête. Résultat de la requête: Echek
+- remarque: Les fichiers JSON doivent être bien formés avec une structure cohérente pour être lus par AWS Athena. Chaque enregistrement JSON doit avoir le même schéma, ce qui signifie que les champs et les types de données doivent correspondre d'un enregistrement à l'autre. Si la structure JSON est inconsistante, cela entraîner des erreurs lors de la lecture des données.
+- Solution: Nettoyage des données en créant un ETL qui permet de transformer les fichiers JSON en fichier Apache Parquet
+
+## VI. nettoyage des données avec AWS LAMBDA
+- créer une fonction Lumbda qui permet de convertir un fichier JSON en un fichier Apache Parquet. Le processus de nettoyage est illustré dans le schéma suivant
+  

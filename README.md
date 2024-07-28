@@ -34,17 +34,17 @@ Ce projet vise à gérer de manière sécurisée, rationaliser et analyser les d
 
 Objectifs:
 
- — Ingestion des données : Mettre en place un mécanisme pour ingérer les données provenant de différentes sources.
- — Processus ETL :   Recevoir les données au format brut et les transformer en un format approprié.
- — Lac de données : Centraliser les données provenant de multiples sources dans un dépôt centralisé.
- — Scalabilité : Assurer que le système évolue avec l'augmentation du volume de données.
- — Cloud : Utiliser le cloud pour traiter de grandes quantités de données, en l'occurrence AWS.
- — Reporting : Créer un tableau de bord pour répondre aux questions posées précédemment.
+ - Ingestion des données : Mettre en place un mécanisme pour ingérer les données provenant de différentes sources.
+- Processus ETL :   Recevoir les données au format brut et les transformer en un format approprié.
+ - Lac de données : Centraliser les données provenant de multiples sources dans un dépôt centralisé.
+- Scalabilité : Assurer que le système évolue avec l'augmentation du volume de données.
+- Cloud : Utiliser le cloud pour traiter de grandes quantités de données, en l'occurrence AWS.
+ - Reporting : Créer un tableau de bord pour répondre aux questions posées précédemment.
 
 
  # source de données
 
- - Where is the data coming from? 
-The data is sourced from Kaggle, [see here to find it.](https://www.kaggle.com/datasets/datasnaek/youtube-new)
+ - Where is the data coming from?
+ - Les données proviennent de Kaggle,, [pour les trouver, consultez ce lien.](https://www.kaggle.com/datasets/datasnaek/youtube-new)
 
- This Kaggle dataset contains statistics (CSV files) on daily popular YouTube videos over the course of many months. There are up to 200 trending videos published every day for many locations. The data for each region is in its own file. The video title, channel title, publication time, tags, views, likes and dislikes, description, and comment count are among the items included in the data. A category_id field, which differs by area, is also included in the JSON file linked to the region.
+Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos YouTube populaires quotidiennes sur une période de plusieurs mois. Jusqu'à 200 vidéos tendance sont publiées chaque jour pour de nombreux emplacements. Les données pour chaque région sont dans leur propre fichier. Les éléments inclus dans les données sont le titre de la vidéo, le titre de la chaîne, l'heure de publication, les tags, les vues, les likes et dislikes, la description et le nombre de commentaires. Un champ category_id, qui varie selon la région, est également inclus dans le fichier JSON lié à la région.

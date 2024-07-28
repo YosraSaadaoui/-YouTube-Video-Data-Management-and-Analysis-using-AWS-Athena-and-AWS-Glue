@@ -7,8 +7,8 @@
 - [Architecture](#architecture)
 - [services AWS](#services-AWS)
 - [Ètapes du projets](#Ètapes-du-projets)
-  - [I.Création d’un utilisateur IAM ](I.Création-d’un-utilisateur-IAM)  II.	Installation de AWS CLI
-  - [II.Installation de AWS CLI ](II.Installation-de-AWS-CLI) 
+  - [I. Création d’un utilisateur IAM ](I.Création-d’un-utilisateur-IAM)  II.	Installation de AWS CLI
+  - [II. Installation de AWS CLI ](II.Installation-de-AWS-CLI) 
   - [II.Installation de AWS CLI](#data-cleaning)
   - [Transform the Data](#transform-the-data)
   - [Create the SQL View](#create-the-sql-view)
@@ -69,4 +69,4 @@ Créer un utilisaeur IAM et lui  accorder la politique « Administrator Acces »
 
 ## II.	Installation de AWS CLI
 Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows (64 bits) :
-[https://awscli.amazonaws.com/AWSCLIV2.msi.]([https://www.kaggle.com/datasets/datasnaek/youtube-new](https://awscli.amazonaws.com/AWSCLIV2.msi))
+[https://awscli.amazonaws.com/AWSCLIV2.msi.]((https://awscli.amazonaws.com/AWSCLIV2.msi))

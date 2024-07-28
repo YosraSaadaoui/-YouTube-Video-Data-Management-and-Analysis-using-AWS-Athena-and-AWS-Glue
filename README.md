@@ -49,6 +49,7 @@ Objectifs:
 Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos YouTube populaires quotidiennes sur une période de plusieurs mois. Jusqu'à 200 vidéos tendance sont publiées chaque jour pour de nombreux emplacements. Les données pour chaque région sont dans leur propre fichier. Les éléments inclus dans les données sont le titre de la vidéo, le titre de la chaîne, l'heure de publication, les tags, les vues, les likes et dislikes, la description et le nombre de commentaires. Un champ category_id, qui varie selon la région, est également inclus dans le fichier JSON lié à la région.
 
 # services AWS
+
  - Amazon S3 : Amazon S3 est un service de stockage d'objets qui offre une évolutivité massive, une disponibilité des données, une sécurité et des performances élevées.
  - AWS IAM : Il s'agit de la gestion des identités et des accès, qui permet de gérer l'accès aux services et ressources AWS de manière sécurisée.
  - Amazon QuickSight : Amazon QuickSight est un service de business intelligence (BI) scalable, sans serveur, intégré et alimenté par l'apprentissage automatique, conçu pour le cloud.

@@ -92,5 +92,6 @@ On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement le
 - Solution: Nettoyage des données en créant un ETL qui permet de transformer les fichiers JSON en fichier Apache Parquet
 
 ## VI. nettoyage des données avec AWS LAMBDA
-- créer une fonction Lumbda qui permet de convertir un fichier JSON en un fichier Apache Parquet. Le processus de nettoyage est illustré dans le schéma suivant
-  
+- créer une fonction Lumbda qui permet de convertir un fichier JSON en un fichier Apache Parquet. Le processus de nettoyage est illustré dans le schéma suivant;
+  ![Diagramme Jason_to_parquet](Assets/images/Jason_to_parquet.png)
+ 

@@ -69,4 +69,4 @@ Créer un utilisaeur IAM et lui  accorder la politique « Administrator Acces »
 
 ## II.	Installation de AWS CLI
 Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows (64 bits) :
-[https://awscli.amazonaws.com/AWSCLIV2.msi.]((https://awscli.amazonaws.com/AWSCLIV2.msi))
+[https://awscli.amazonaws.com/AWSCLIV2.msi.](https://awscli.amazonaws.com/AWSCLIV2.msi)

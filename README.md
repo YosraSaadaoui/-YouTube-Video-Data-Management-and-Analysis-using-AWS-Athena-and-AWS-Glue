@@ -67,6 +67,9 @@ Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos 
 
 Créer un utilisaeur IAM et lui  accorder la politique « Administrator Acces » puis lui créer une clé d'accès.
 
+
 ## II.	Installation de AWS CLI
 Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows (64 bits) :
 [https://awscli.amazonaws.com/AWSCLIV2.msi.](https://awscli.amazonaws.com/AWSCLIV2.msi)
+
+## III. Extraction des données dans un compartiment S3

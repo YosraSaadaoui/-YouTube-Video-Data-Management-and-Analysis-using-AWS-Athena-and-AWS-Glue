@@ -73,3 +73,6 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
 [https://awscli.amazonaws.com/AWSCLIV2.msi.](https://awscli.amazonaws.com/AWSCLIV2.msi)
 
 ## III. Extraction des données dans un compartiment S3
+ - Télécharger les données à partir de Kaggle
+ - Créer un compartiment S3
+ - 

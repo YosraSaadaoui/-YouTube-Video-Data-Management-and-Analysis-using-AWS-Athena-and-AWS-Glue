@@ -7,9 +7,9 @@
 - [Architecture](#architecture)
 - [services AWS](#services-AWS)
 - [Ètapes du projets](#Ètapes-du-projets)
-  - [I.Création d’un utilisateur IAM ](I.Création-d’un-utilisateur-IAM)
-  - [Data Exploration](#data-exploration)
-  - [Data Cleaning](#data-cleaning)
+  - [I.Création d’un utilisateur IAM ](I.Création-d’un-utilisateur-IAM)  II.	Installation de AWS CLI
+  - [II.Installation de AWS CLI ](II.Installation-de-AWS-CLI) 
+  - [II.Installation de AWS CLI](#data-cleaning)
   - [Transform the Data](#transform-the-data)
   - [Create the SQL View](#create-the-sql-view)
 - [Testing](#testing)
@@ -63,4 +63,10 @@ Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos 
 
 # Ètapes du projets
 
-## I.Création d’un utilisateur IAM 
+## I. Création d’un utilisateur IAM 
+
+Créer un utilisaeur IAM et lui  accorder la politique « Administrator Acces » puis lui créer une clé d'accès.
+
+## II.	Installation de AWS CLI
+Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows (64 bits) :
+[https://awscli.amazonaws.com/AWSCLIV2.msi.]([https://www.kaggle.com/datasets/datasnaek/youtube-new](https://awscli.amazonaws.com/AWSCLIV2.msi))

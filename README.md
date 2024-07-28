@@ -10,7 +10,7 @@
   - [I. Création d’un utilisateur IAM ](#I-Création-d'un-utilisateur-IAM) 
   - [II. Installation de AWS CLI ](#II.-Installation-de-AWS-CLI) 
   - [III. Extraction des données dans un compartiment S3](#III.extraction-des-donnees-dans-un-compartiment-S3)
-  - [IV. Intégration de données avec AWS GLUE](#transform-the-data)
+  - [IV. Intégration de données avec AWS GLUE](#IV.-Intégration-de-données-avec-AWS-GLUE)
   - [Create the SQL View](#create-the-sql-view)
 - [Testing](#testing)
   - [Data Quality Tests](#data-quality-tests)
@@ -76,3 +76,4 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
  - Télécharger les données à partir de Kaggle
  - Créer un compartiment S3
  - Copier les données dans le compartiment S3 en utilisant AWS CLI
+##  IV. Intégration de données avec AWS GLUE

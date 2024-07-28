@@ -28,7 +28,7 @@
   - [Potential Courses of Actions](#potential-courses-of-actions)
 - [Conclusion](#conclusion)
 
-#Objectif
+# Objectif
 Ce projet vise à gérer de manière sécurisée, rationaliser et analyser les données structurées et semi-structurées des vidéos YouTube en fonction des catégories de vidéos et des métriques de tendance.
 
 
@@ -42,7 +42,7 @@ Objectifs:
  — Reporting : Créer un tableau de bord pour répondre aux questions posées précédemment.
 
 
- #source de données
+ # source de données
 
  - Where is the data coming from? 
 The data is sourced from Kaggle, [see here to find it.](https://www.kaggle.com/datasets/datasnaek/youtube-new)

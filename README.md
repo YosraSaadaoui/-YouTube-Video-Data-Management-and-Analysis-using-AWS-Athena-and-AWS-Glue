@@ -7,9 +7,9 @@
 - [Architecture](#architecture)
 - [services AWS](#services-AWS)
 - [Ètapes du projets](#Ètapes-du-projets)
-  - [I. Création d’un utilisateur IAM ](I.Création-d’un-utilisateur-IAM)  II.	Installation de AWS CLI
+  - [I. Création d’un utilisateur IAM ](I.Création-d’un-utilisateur-IAM)  
   - [II. Installation de AWS CLI ](II.Installation-de-AWS-CLI) 
-  - [II.Installation de AWS CLI](#data-cleaning)
+  - [III. Extraction des données dans un compartiment S3](#extraction-des-données-dans-un-compartiment-S3)
   - [Transform the Data](#transform-the-data)
   - [Create the SQL View](#create-the-sql-view)
 - [Testing](#testing)

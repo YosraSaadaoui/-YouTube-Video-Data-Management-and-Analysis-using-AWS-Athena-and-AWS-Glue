@@ -76,4 +76,9 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
  - Télécharger les données à partir de Kaggle
  - Créer un compartiment S3
  - Copier les données dans le compartiment S3 en utilisant AWS CLI
+
+   
 ##  IV. Intégration de données avec AWS GLUE
+- Créer un role pour AWS glue (Autoriser l’acces aux compartiments S3)
+- II.	Créer un crawler catalogue : Pour extraire des informations sur le schéma des données, ce qui est utile pour comprendre la structure des données, créer des transformations et générer des schémas de destination pour les data lakes. Une fois que les données sont découvertes et cataloguées par le crawler, elles peuvent être utilisées avec Amazon Athena pour l'analyse SQL
+  

@@ -75,4 +75,4 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
 ## III. Extraction des données dans un compartiment S3
  - Télécharger les données à partir de Kaggle
  - Créer un compartiment S3
- - 
+ - Copier les données dans le compartiment S3 en utilisant AWS CLI

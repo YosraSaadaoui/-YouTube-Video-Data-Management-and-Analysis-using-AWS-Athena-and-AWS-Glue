@@ -7,8 +7,8 @@
 - [Architecture](#architecture)
 - [services AWS](#services-AWS)
 - [Ètapes du projets](#Ètapes-du-projets)
-  - [I. Création d’un utilisateur IAM ](I.Creation-d-un-utilisateur-IAM)  
-  - [II. Installation de AWS CLI ](II.-Installation-de-AWS-CLI) 
+  - [I. Création d’un utilisateur IAM ](#I.Creation-d-un-utilisateur-IAM)  
+  - [II. Installation de AWS CLI ](#II.-Installation-de-AWS-CLI) 
   - [III. Extraction des données dans un compartiment S3](#III.extraction-des-donnees-dans-un-compartiment-S3)
   - [IV. Intégration de données avec AWS GLUE](#transform-the-data)
   - [Create the SQL View](#create-the-sql-view)
@@ -68,7 +68,7 @@ Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos 
 Créer un utilisaeur IAM et lui  accorder la politique « Administrator Acces » puis lui créer une clé d'accès.
 
 
-## II.	Installation de AWS CLI
+## II. Installation de AWS CLI
 Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows (64 bits) :
 [https://awscli.amazonaws.com/AWSCLIV2.msi.](https://awscli.amazonaws.com/AWSCLIV2.msi)
 

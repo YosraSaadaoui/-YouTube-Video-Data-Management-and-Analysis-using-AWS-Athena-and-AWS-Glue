@@ -7,7 +7,7 @@
 - [Architecture](#architecture)
 - [services AWS](#services-AWS)
 - [Ètapes du projets](#Ètapes-du-projets)
-  - [I. Création d’un utilisateur IAM ](#I-Création-d'un-utilisateur-IAM)  
+  - [I. Création d’un utilisateur IAM ](#I-Création-d'un-utilisateur-IAM) 
   - [II. Installation de AWS CLI ](#II.-Installation-de-AWS-CLI) 
   - [III. Extraction des données dans un compartiment S3](#III.extraction-des-donnees-dans-un-compartiment-S3)
   - [IV. Intégration de données avec AWS GLUE](#transform-the-data)

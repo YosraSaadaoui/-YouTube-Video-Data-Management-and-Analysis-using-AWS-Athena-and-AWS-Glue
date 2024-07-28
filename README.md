@@ -74,9 +74,9 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
 [https://awscli.amazonaws.com/AWSCLIV2.msi.](https://awscli.amazonaws.com/AWSCLIV2.msi)
 
 ## III. Extraction des données dans un compartiment S3
- - Télécharger les données à partir de Kaggle
- - Créer un compartiment S3
- - Copier les données dans le compartiment S3 en utilisant AWS CLI
+ - 1 Télécharger les données à partir de Kaggle
+ - 2 Créer un compartiment S3
+ - 3 Copier les données dans le compartiment S3 en utilisant AWS CLI
 
    
 ##  IV. Intégration de données avec AWS GLUE
@@ -94,4 +94,6 @@ On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement le
 ## VI. nettoyage des données avec AWS LAMBDA
 - créer une fonction Lumbda qui permet de convertir un fichier JSON en un fichier Apache Parquet. Le processus de nettoyage est illustré dans le schéma suivant;
   ![Diagramme Jason_to_parquet](Assets/images/Jason_to_parquet.png)
- 
+ - 1 créer un rôle pour la fonction Lambda (Autoriser l’acces aux compartiments S3)
+ - 2 Créer un compartiment S3 qui va contenir les données nettoyées
+ - 3 Créer la fonction lambda (le code de la fonction est fourni dans le fichier lambda_function.py [le fichier lambda_function.py.](https://awscli.amazonaws.com/AWSCLIV2.msi)

@@ -62,3 +62,5 @@ Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos 
  - AWS Athena : Athena est un service de requêtes interactives pour S3, permettant de interroger les données directement dans S3 sans avoir besoin de les charger.
 
 # Ètapes du projets
+
+## I.Création d’un utilisateur IAM 

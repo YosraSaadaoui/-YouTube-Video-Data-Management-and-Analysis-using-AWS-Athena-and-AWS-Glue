@@ -63,7 +63,7 @@ Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos 
 
 # Ètapes du projets
 
-## I. Création d’un utilisateur IAM 
+## I Création d’un utilisateur IAM 
 
 Créer un utilisaeur IAM et lui  accorder la politique « Administrator Acces » puis lui créer une clé d'accès.
 

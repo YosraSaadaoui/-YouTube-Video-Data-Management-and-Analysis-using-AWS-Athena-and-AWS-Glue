@@ -3,7 +3,7 @@
 # Table des matières
 
 - [Objectif](#Objectif)
-- [source de données](#source de donneés)
+- [source de données](#source-de-données)
 - [Architecture](#architecture)
 - [Design](#design)
   - [Mockup](#mockup)
@@ -44,6 +44,6 @@ Objectifs:
 
  # source de données
 
- - Les données proviennent de Kaggle,[pour les trouver, consultez ce lien.](https://www.kaggle.com/datasets/datasnaek/youtube-new)
+ - Les données proviennent de Kaggle,pour les trouver[cliquer ici.](https://www.kaggle.com/datasets/datasnaek/youtube-new)
 
 Ces données Kaggle contiennent des statistiques (fichiers CSV) sur les vidéos YouTube populaires quotidiennes sur une période de plusieurs mois. Jusqu'à 200 vidéos tendance sont publiées chaque jour pour de nombreux emplacements. Les données pour chaque région sont dans leur propre fichier. Les éléments inclus dans les données sont le titre de la vidéo, le titre de la chaîne, l'heure de publication, les tags, les vues, les likes et dislikes, la description et le nombre de commentaires. Un champ category_id, qui varie selon la région, est également inclus dans le fichier JSON lié à la région.

@@ -11,7 +11,7 @@
   - [II. Installation de AWS CLI ](#II.-Installation-de-AWS-CLI) 
   - [III. Extraction des données dans un compartiment S3](#III.extraction-des-donnees-dans-un-compartiment-S3)
   - [IV. Intégration de données avec AWS GLUE](#IV.-Intégration-de-données-avec-AWS-GLUE)
-  - [Create the SQL View](#create-the-sql-view)
+  - [V. Analyse ad-hoc avec AWS Athena](#V.-Analyse-ad-hoc-avec-AWS-Athena)
 - [Testing](#testing)
   - [Data Quality Tests](#data-quality-tests)
 - [Visualization](#visualization)
@@ -80,5 +80,7 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
    
 ##  IV. Intégration de données avec AWS GLUE
 - Créer un role pour AWS glue (Autoriser l’acces aux compartiments S3)
-- II.	Créer un crawler catalogue : Pour extraire des informations sur le schéma des données, ce qui est utile pour comprendre la structure des données, créer des transformations et générer des schémas de destination pour les data lakes. Une fois que les données sont découvertes et cataloguées par le crawler, elles peuvent être utilisées avec Amazon Athena pour l'analyse SQL
+- Créer un crawler catalogue : Pour extraire des informations sur le schéma des données, ce qui est utile pour comprendre la structure des données, créer des transformations et générer des schémas de destination pour les data lakes. Une fois que les données sont découvertes et cataloguées par le crawler, elles peuvent être utilisées avec Amazon Athena pour l'analyse SQL
+- Une fois le crawler est créé, on l’exécute. Une table est créée dans la base de données destination ( crée lors de la création  du crawler catalogue) 
   
+## V. Analyse ad-hoc avec AWS Athena

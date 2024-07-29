@@ -96,4 +96,4 @@ On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement le
   ![Diagramme Jason_to_parquet](Assets/images/Jason_to_parquet.png)
  - 1 créer un rôle pour la fonction Lambda (Autoriser l’acces aux compartiments S3)
  - 2 Créer un compartiment S3 qui va contenir les données nettoyées
- - 3 Créer la fonction lambda (le code de la fonction est fourni dans le fichier lambda_function.py [le fichier lambda_function.py.](https://awscli.amazonaws.com/AWSCLIV2.msi)
+ - 3 Créer la fonction lambda (le code de la fonction est fourni dans [le fichier lambda_function.py.](Assets/Scripts/lambda_function.py)

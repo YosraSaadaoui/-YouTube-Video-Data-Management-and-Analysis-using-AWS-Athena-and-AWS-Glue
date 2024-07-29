@@ -15,7 +15,7 @@
   - [VI. nettoyage des données JSON avec AWS LAMBDA](#VI.-nettoyage-des-données-JSON-avec-AWS-LAMBDA)
   - [VII. Intégration des fichiers CSV avec AWS GLUE](#VII.-Intégration-des-fichiers-CSV-avec-AWS-GLUE)
   - [VIII. pré-traitement des données CSV avec AWS GLUE et AWS LAMBDA](#VIII.-pré-traitement-des-données-CSV-avec-AWS-GLUE-et-AWS-LAMBDA)
-  - [IX. Créer un JOB ETL pour charger tous les données netoyées dans un même compartiment](#IX.-Créer-un-JOB-ETL-pour-charger-tous-les-données-netoyées-dans-un-même-compartiment)
+  - [IX. Créer un JOB ETL avec AWS GLUE](#IX.-Créer-un-JOB-ETL-avec-AWS-GLUE)
 - [Testing](#testing)
   - [Data Quality Tests](#data-quality-tests)
 - [Visualization](#visualization)
@@ -119,4 +119,8 @@ On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement le
 -	vérifier le schéma de la table et le type de la colonne id dans la console Athena
 
   
-## IX.Créer un JOB ETL pour charger tous les données netoyées dans un même compartiment
+## IX.Créer un JOB ETL avec AWS GLUE
+Charger tous les donneées cleanned dans un même compartiment en utilisant un job ETL
+-Dans la console Glue, sélectionner Virtual ETL puis Créer un JOB ETL et l'exécuter.
+- créer a glue crawler qui va créer une table dans la base de données 
+- créer un trigger qui permet d’automatiser la fonction lamda 

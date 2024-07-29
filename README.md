@@ -121,6 +121,10 @@ On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement le
   
 ## IX.Créer un JOB ETL avec AWS GLUE
 Charger tous les donneées cleanned dans un même compartiment en utilisant un job ETL
--Dans la console Glue, sélectionner Virtual ETL puis Créer un JOB ETL et l'exécuter.
+- Dans la console Glue, sélectionner Virtual ETL puis Créer un JOB ETL et l'exécuter.
 - créer a glue crawler qui va créer une table dans la base de données 
-- créer un trigger qui permet d’automatiser la fonction lamda 
+- créer un trigger qui permet d’automatiser la fonction lamda
+
+  Un résumé de ce qu’on a fait :
+
+  ![Diagramme resume](Assets/images/Jason_to_parquet.png)

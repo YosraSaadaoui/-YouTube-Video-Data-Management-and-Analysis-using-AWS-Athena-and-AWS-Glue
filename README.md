@@ -127,4 +127,4 @@ Charger tous les donneées cleanned dans un même compartiment en utilisant un j
 
   Un résumé de ce qu’on a fait :
 
-  ![Diagramme resume](Assets/images/Jason_to_parquet.png)
+  ![Diagramme resume](Assets/images/resume.png)

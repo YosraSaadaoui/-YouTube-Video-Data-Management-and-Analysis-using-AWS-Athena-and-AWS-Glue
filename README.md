@@ -10,9 +10,12 @@
   - [I. Création d’un utilisateur IAM ](#I-Création-d'un-utilisateur-IAM) 
   - [II. Installation de AWS CLI ](#II.-Installation-de-AWS-CLI) 
   - [III. Extraction des données dans un compartiment S3](#III.extraction-des-donnees-dans-un-compartiment-S3)
-  - [IV. Intégration de données avec AWS GLUE](#IV.-Intégration-de-données-avec-AWS-GLUE)
+  - [IV. Intégration des fichiers JSON avec AWS GLUE](#IV.-Intégration-des-fichiers-JSON-avec-AWS-GLUE)
   - [V. Analyse ad-hoc avec AWS Athena](#V.-Analyse-ad-hoc-avec-AWS-Athena)
-  - [VI. nettoyage des données avec AWS LAMBDA](#VI.-nettoyage-des-données-avec-AWS-LAMBDA)
+  - [VI. nettoyage des données JSON avec AWS LAMBDA](#VI.-nettoyage-des-données-JSON-avec-AWS-LAMBDA)
+  - [VII. Intégration des fichiers CSV avec AWS GLUE](#VII.-Intégration-des-fichiers-CSV-avec-AWS-GLUE)
+  - [VIII. pré-traitement des données CSV avec AWS GLUE et AWS LAMBDA](#VIII.-pré-traitement-des-données-CSV-avec-AWS-GLUE-et-AWS-LAMBDA)
+  - [IX. Créer un JOB ETL pour charger tous les données netoyées dans un même compartiment](#IX.-Créer-un-JOB-ETL-pour-charger-tous-les-données-netoyées-dans-un-même-compartiment)
 - [Testing](#testing)
   - [Data Quality Tests](#data-quality-tests)
 - [Visualization](#visualization)
@@ -79,7 +82,7 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
  - 3 Copier les données ( les fichier JSON et les fichier CSV) dans le compartiment S3 en utilisant AWS CLI
 
    
-##  IV. Intégration de données avec AWS GLUE
+##  IV. Intégration des fichiers JSON avec AWS GLUE
 - Créer un role pour AWS glue (Autoriser l’acces aux compartiments S3)
 - Créer un crawler catalogue : Pour extraire des informations sur le schéma des données, ce qui est utile pour comprendre la structure des données, créer des transformations et générer des schémas de destination pour les data lakes. Une fois que les données sont découvertes et cataloguées par le crawler, elles peuvent être utilisées avec Amazon Athena pour l'analyse SQL
 - Exécuter le crawler. Une table est créée dans la base de données destination ( crée lors de la création  du crawler catalogue) 
@@ -91,8 +94,8 @@ On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement le
 - REMARQUE : Les fichiers JSON doivent être bien formés avec une structure cohérente pour être lus par AWS Athena. Chaque enregistrement JSON doit avoir le même schéma, ce qui signifie que les champs et les types de données doivent correspondre d'un enregistrement à l'autre. Si la structure JSON est inconsistante, cela entraîner des erreurs lors de la lecture des données.
 - SOLUTION : Nettoyage des données en créant un ETL qui permet de transformer les fichiers JSON en fichier Apache Parquet
 
-## VI. nettoyage des données avec AWS LAMBDA
-- créer une fonction Lumbda qui permet de convertir un fichier JSON en un fichier Apache Parquet. Le processus de nettoyage est illustré dans le schéma suivant;
+## VI. nettoyage des données JSON avec AWS LAMBDA
+ - créer une fonction Lumbda qui permet de convertir un fichier JSON en un fichier Apache Parquet. Le processus de nettoyage est illustré dans le schéma suivant;
   ![Diagramme Jason_to_parquet](Assets/images/Jason_to_parquet.png)
  - 1 créer un rôle pour la fonction Lambda (Autoriser l’acces aux compartiments S3)
  - 2 Créer un compartiment S3 qui va contenir les données nettoyées
@@ -101,3 +104,19 @@ On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement le
  - 5 Le package awswrangler n’est pas reconnu,  il faut ajouter la couche AWS « AWSSDKPandas-Python38 »
  - 6 Prolonger le temp d’expiration de la fonction Lambda à 10
  - 7 ajoute d’autre autorisation au rôle de la fonction Lambda ( Autorisation d'accès au service AWS Glue)
+ - 8 vérifier les fichiers de type Parquet dans S3  et la table des donnése dans AWS glue
+ - 9 Exécuter des requêtes dans AWS Athena
+   
+##  VII. Intégration des fichiers CSV avec AWS GLUE
+- Créer un nouveau crawler pour créer un catalogue à partir des fichiers CSV du compartiment S3
+- Exécuter le nouveau crawler. Une deuxième table est créée dans la base de données destination
+
+## VIII. pré-traitement des données CSV avec AWS GLUE et AWS LAMBDA
+- Changer le type de données dans le catalogue : changer le type de la colonne "category_id" de varchar à int
+-	Supprimer le fichier Parquet dans le compartiment S3
+-	Confirmer append dans la fonction Lambda
+-	Exécuter le test dans la fonction Lambda
+-	vérifier le schéma de la table et le type de la colonne id dans la console Athena
+
+  
+## IX.Créer un JOB ETL pour charger tous les données netoyées dans un même compartiment

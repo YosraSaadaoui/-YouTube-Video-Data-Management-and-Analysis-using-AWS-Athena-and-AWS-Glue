@@ -76,7 +76,7 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
 ## III. Extraction des données dans un compartiment S3
  - 1 Télécharger les données à partir de Kaggle
  - 2 Créer un compartiment S3
- - 3 Copier les données dans le compartiment S3 en utilisant AWS CLI
+ - 3 Copier les données ( les fichier JSON et les fichier CSV) dans le compartiment S3 en utilisant AWS CLI
 
    
 ##  IV. Intégration de données avec AWS GLUE
@@ -88,8 +88,8 @@ Téléchargez et exécutez le AWS CLI programme d'installation MSI pour Windows 
 On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement les données et obtenir des réponses à des requêtes sans avoir à attendre le chargement préalable des données.
 - Configurer un emplacement pour les résultats de requêtes dans Amazon S3.
 - Exécuter la première requête. Résultat de la requête: Echek
-- remarque: Les fichiers JSON doivent être bien formés avec une structure cohérente pour être lus par AWS Athena. Chaque enregistrement JSON doit avoir le même schéma, ce qui signifie que les champs et les types de données doivent correspondre d'un enregistrement à l'autre. Si la structure JSON est inconsistante, cela entraîner des erreurs lors de la lecture des données.
-- Solution: Nettoyage des données en créant un ETL qui permet de transformer les fichiers JSON en fichier Apache Parquet
+- REMARQUE : Les fichiers JSON doivent être bien formés avec une structure cohérente pour être lus par AWS Athena. Chaque enregistrement JSON doit avoir le même schéma, ce qui signifie que les champs et les types de données doivent correspondre d'un enregistrement à l'autre. Si la structure JSON est inconsistante, cela entraîner des erreurs lors de la lecture des données.
+- SOLUTION : Nettoyage des données en créant un ETL qui permet de transformer les fichiers JSON en fichier Apache Parquet
 
 ## VI. nettoyage des données avec AWS LAMBDA
 - créer une fonction Lumbda qui permet de convertir un fichier JSON en un fichier Apache Parquet. Le processus de nettoyage est illustré dans le schéma suivant;
@@ -97,4 +97,7 @@ On va utiliser AWS Athena pour faire une analyse ad hoc : explorer rapidement le
  - 1 créer un rôle pour la fonction Lambda (Autoriser l’acces aux compartiments S3)
  - 2 Créer un compartiment S3 qui va contenir les données nettoyées
  - 3 Créer la fonction lambda le code de la fonction est fourni dans [le fichier lambda_function.py.](Assets/Scripts/lambda_function.py)
- - 4 Tester la fonction. le code du test est fourni dans [le fichier test.txt.](Assets/Scripts/test.txt) 
+ - 4 Tester la fonction. le code du test est fourni dans [le fichier test.txt.](Assets/Scripts/test.txt)
+ - 5 Le package awswrangler n’est pas reconnu,  il faut ajouter la couche AWS « AWSSDKPandas-Python38 »
+ - 6 Prolonger le temp d’expiration de la fonction Lambda à 10
+ - 7 ajoute d’autre autorisation au rôle de la fonction Lambda ( Autorisation d'accès au service AWS Glue)

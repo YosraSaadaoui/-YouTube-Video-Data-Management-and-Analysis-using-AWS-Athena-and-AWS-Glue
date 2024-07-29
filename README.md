@@ -16,18 +16,7 @@
   - [VII. Intégration des fichiers CSV avec AWS GLUE](#VII.-Intégration-des-fichiers-CSV-avec-AWS-GLUE)
   - [VIII. pré-traitement des données CSV avec AWS GLUE et AWS LAMBDA](#VIII.-pré-traitement-des-données-CSV-avec-AWS-GLUE-et-AWS-LAMBDA)
   - [IX. Créer un JOB ETL avec AWS GLUE](#IX.-Créer-un-JOB-ETL-avec-AWS-GLUE)
-- [Testing](#testing)
-  - [Data Quality Tests](#data-quality-tests)
-- [Visualization](#visualization)
-  - [Results](#results)
-  - [DAX Measures](#dax-measures)
-- [Analysis](#analysis)
-  - [Findings](#findings)
-  - [Validation](#validation)
-  - [Discovery](#discovery)
-- [Recommendations](#recommendations)
-  - [Potential ROI](#potential-roi)
-  - [Potential Courses of Actions](#potential-courses-of-actions)
+
 - [Conclusion](#conclusion)
 
 # Objectif
